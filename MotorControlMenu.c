@@ -8,7 +8,11 @@ int main(void)
     {
         printf("1.Start motor\n2.Stop motor\n3.Reverse Motor\n 0.exit\n");
         printf("Enter your command : ");
-        scanf("%d",&command);
+
+        if(scanf("%i",&command) != 1){
+            printf("invalid command \n only integers are allowed");
+            return 0;
+        }
     
 
         switch (command)
