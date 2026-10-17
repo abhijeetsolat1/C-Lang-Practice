@@ -9,6 +9,8 @@ int main(void)
         printf("1.Start motor\n2.Stop motor\n3.Reverse Motor\n 0.exit\n");
         printf("Enter your command : ");
 
+        // scanf returns 0 (false) when it gets unexpected value eg. for %i or %d we get character scanf will return 0
+        // scanf returns 1 (true) when it getsexpected value eg. for %i or %d we get 5 then scanf will return 1
         if(scanf("%i",&command) != 1){
             printf("invalid command \n only integers are allowed");
             return 0;
